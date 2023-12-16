@@ -4,6 +4,11 @@ const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
+yesBtn.addEventListener("mouseover", () => {
+  yesBtn.classList.add("shake");
+
+});
+
 yesBtn.addEventListener("click", () => {
   question.classList.add("shake");
   question.innerHTML = "EBA, te vejo dia 16!";
