@@ -5,6 +5,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
+  question.classList.add("shake");
   question.innerHTML = "EBA, te vejo dia 16!";
   gif.src =
     "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
