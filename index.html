@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mensagem pra você</title>
+    <title>convite especial</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="wrapper">
-        <h2 class="question">você quer sair comigo?</h2>
+    <div class="wrapper" id="etapa1">
+        <h2 class="question">você topa ir no meu aniversário?</h2>
         <img class="gif" alt="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif"/>
         <div class="btn-group">
-            <button class="yes-btn">sim</button>
-            <button class="no-btn">não</button>
+            <button class="yes-btn" id="sim1">Sim</button>
+            <button class="no-btn" id="noBtn">Não</button>
         </div>
+    </div>
+    <div class="wrapper hidden" id="etapa2">
+        <h2>você quer ir mesmo?</h2>
+        <img class="gif" alt="gif" src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif"/>
+        <div class="btn-group">
+            <button class="yes-btn" id="sim2">SIM MESMO!</button>
+            <button class="no-btn" id="nao2">Agora não</button>
+        </div>
+    </div>
+    <div class="form-container hidden" id="etapa3">
+        <h2>Por favor, insira seu nome:</h2>
+        <form id="formConfirmacao">
+            <input type="text" id="nome" placeholder="Seu nome" required />
+            <button type="submit" class="yes-btn">Confirmar</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>

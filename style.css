@@ -14,6 +14,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .gif {
     height: 100%;
     width: 100%;
@@ -32,8 +36,12 @@ h2 {
     justify-content: center;
     margin-top: 50px;
 }
+
+.btn-group button {
+  position: absolute;
+} 
+
 button {
-    position: absolute;
     width: 150px;
     height: inherit;
     color: white;
@@ -70,3 +78,60 @@ button:nth-child(2) {
       transform: translateX(10px);
     }
   }
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante que o formulário ocupe a altura total da tela */
+    padding: 20px;
+    background: whitesmoke; /* Cor de fundo consistente */
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #e94d58;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #e94d58;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    position: static; 
+    margin: 0 !important
+}
+
+form button {
+    width: 100%;
+    position: static; 
+    margin: 0 !important;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #e94d58;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: #d43c4a;
+}
