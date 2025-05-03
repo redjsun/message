@@ -19,8 +19,10 @@ body {
 }
 
 .gif {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: 70%; /* Reduzido para 70% da largura do container */
+    display: block;
+    margin: 0 auto; /* Centraliza o GIF */
 }
 
 h2 {
@@ -134,4 +136,23 @@ form button {
 
 form button:hover {
     background-color: #d43c4a;
+}
+
+.event-info {
+    text-align: center;
+    font-size: 1.2em; /* Aumentado para um texto maior */
+    color: #333;
+    margin-top: 15px; /* Espaçamento entre o GIF e o texto */
+}
+
+.event-info a {
+    text-decoration: none;
+    color: #e94d58;
+    font-size: 1.0em;
+}
+
+.event-info a img {
+    width: 25px; /* Ajusta o tamanho do ícone de localização */
+    height: 25px;
+    vertical-align: middle;
 }

@@ -9,6 +9,14 @@ const noBtn = document.getElementById('noBtn');
 const formConfirmacao = document.getElementById('formConfirmacao');
 const nomeInput = document.getElementById('nome');
 
+async function getFrases() {
+    const response = await fetch('frases.csv');
+    const data = await response.text();
+    const linhas = data.split('\n').slice(1); // Ignora o cabeçalho
+    const frases = linhas.map(linha => linha.split(',')[1].replace(/"/g, '').trim());
+    return frases;
+}
+
 // Primeiro Sim
 sim1.addEventListener('click', () => {
     etapa1.classList.add('hidden');
@@ -32,10 +40,13 @@ formConfirmacao.addEventListener('submit', async (event) => {
         return;
     }
 
+    const frases = await getFrases();
+    const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+
     // Exibir uma mensagem de carregamento
     document.body.innerHTML = `
         <div class="wrapper">
-            <h2>⏳ Processando sua confirmação...</h2>
+            <h2>${fraseAleatoria.replace(/\n/g, '<br>')}</h2>
         </div>
     `;
 
@@ -52,11 +63,15 @@ formConfirmacao.addEventListener('submit', async (event) => {
             }
         });
 
-        // Exibir a tela final
+        // Exibir a tela final com o texto adicional e ícone centralizado
         document.body.innerHTML = `
             <div class="wrapper">
                 <h2>🎉 Combinado, ${nome}! Te vejo lá!</h2>
                 <img class="gif" src="https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif"/>
+                <h2>entra no zapzap ai</h2>
+                <a href="https://chat.whatsapp.com/I4yuoqNgGmN49jhnw77Dow" target="_blank" style="display: flex; justify-content: center; margin-top: 20px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+                </a>
             </div>
         `;
     } catch (error) {
