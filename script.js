@@ -69,7 +69,7 @@ formConfirmacao.addEventListener('submit', async (event) => {
                 <h2>🎉 Combinado, ${nome}! Te vejo lá!</h2>
                 <img class="gif" src="https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif"/>
                 <h2>entra no zapzap ai</h2>
-                <a href="https://chat.whatsapp.com/I4yuoqNgGmN49jhnw77Dow" target="_blank" style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href="https://chat.whatsapp.com/GvH348wUp3EHoX4q4vN0FQ" target="_blank" style="display: flex; justify-content: center; margin-top: 20px;">
                     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 50px; height: 50px;">
                 </a>
             </div>
